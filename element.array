@@ -1,0 +1,26 @@
+/-*Q6. Write a java program to search an element in an array , its element found or not.
+Input:
+ Array = {10, 20, 30, 40, 50}
+ Element to search = 30
+Output : Element 30 found at index 2
+Explanation :
+We traverse the array and compare each element with the search key. 
+If it matches, print "found" with index; otherwise print "not found".*/
+ 
+import java.util.Scanner;
+public class element
+{   public static void main(String[]args)
+	{  
+	   Scanner sc = new Scanner(System.in);
+	   
+	   System.out.println(Enter the element in the array");
+	    int i = sc.nextInt();
+		
+		if(a[i]=30)
+	   {
+	    System.out.println(" If it matches print "found" with index"+found);
+		}
+		else 
+		{
+		  System.out.println(" If it  matches print "not found""+not found);
+		
