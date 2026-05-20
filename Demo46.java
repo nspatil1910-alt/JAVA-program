@@ -1,42 +1,40 @@
-/*Question 46: Chef is watching TV. The current volume of the TV is XX. Pressing the volume up button of the TV remote increases the volume by 11 while pressing the volume down button decreases the volume by 11. The chef wants to change the volume from XX to YY. Find the minimum number of button presses required to do so.
-Input Format
-• The first line contains a single integer TT - the number of test cases. Then the test cases follow.
-• The first and only line of each test case contains two integers XX and YY - the initial volume and final volume of the TV.
-Output Format
-For each test case, output the minimum number of times Chef has to press a button to change the volume from XX to YY.
-Constraints
-1<=T <=100
-1<=X<=Y<=100
-Input Output 2
-50 54 4
-12 10 2
-
-Explanation:
-Test Case 1: Chef can press the volume up button 4 times to increase the volume from 50 to 54.
-Test Case 2: Chef can press the volume down button 2 times to decrease the volume from 12 to 10.
-
-Asked In Companies:
-Just Practice assignment*/
+/*Q46.Write a program in java to find the maximum for each and every contigious subarray of size k from a given array.
+			
+Expected Output:
+		The given array is:
+		1 3 6 21 4 9 12 3 16 10
+		The length of each subarray is: 4
+		The contagious subarray of length 4 and their maximum value are:
+		1 3 6 21 ----> 21
+		3 6 21 4 ----> 21
+		6 21 4 9 ----> 21
+		21 4 9 12 ----> 21
+		4 9 12 3 ----> 12
+		9 12 3 16 ----> 16
+		12 3 16 10 ----> 16*/
 
 import java.util.Scanner;
-public class Demo46{
-	public static void main(String args[]){
-		Scanner sc = new Scanner(System.in);
-		
-		System.out.println("Enter your current volume: ");
-		int currentVol = sc.nextInt();
-		
-		System.out.println("Enter your expected volume: ");
-		int expectedVol = sc.nextInt();
-		
-		if(currentVol>expectedVol){
-			System.out.println("You have to decrease volume by: "+(currentVol-expectedVol));
-		}
-		else if(expectedVol>currentVol){
-			System.out.println("You have to increase volume by: "+(expectedVol-currentVol));
-		}
-		else{
-			System.out.println("You dont need to press any button");
-		}
-	}
-}
+public class DEMO46
+{
+public static void main(String[] args)
+ {
+        Scanner sc = new Scanner(System.in);
+		int [] a={1,3,6,21,4,9,12,3,16,10};
+		int k=4;
+          System.out.println(" the contagious subarray maximum values are :");
+        for(int i=0;i<a.length-k;i++)
+        {
+             a[i]=sc.nextInt();
+        }
+            for (int j = i; j < i + k; j++) {
+                System.out.print(a[j] + " ");
+
+                if (a[j] > max) {
+                    max = a[j];
+                }
+            }
+
+            System.out.println("----> " + max);
+        }
+    }
+
